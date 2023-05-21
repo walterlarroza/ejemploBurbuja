@@ -1,34 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Form login | Burbuja </title>
-    <link rel="stylesheet" href="css/style.css">
+  <title>Sistema de Reservas</title>
+  <link rel="stylesheet" type="text/css" href="./css/styles.css">
 </head>
-
 <body>
-    <div class="logoPrincipal">
-        <img class="avatar" src="img/logochico.png" alt="primerlogo">
-        <h1>BURBUJAS </h1>
-        <form action="">
-            <!-- User Name -->
-            <label for="Nombre de Usuario">Nombre de Usuario</label>
-            <input type="text" placeholder="Ingrese nombre">
-            <!-- Password -->
-            <label for="Contraseña">Contraseña</label>
-            <input type="password" placeholder="ingrese contraseña">
+  <h1>Sistema de Reservas</h1>
 
-            <input type="submit" value="Ingrese">
+  <div id="calendar">
+    <!-- Calendario aquí -->
+  </div>
 
-            <a href="#">olvidaste tu contraseña</a><br/>
-            <a href="#">quieres registrarte </a>
+  <div id="booking-form">
+    <h2>Reservar</h2>
+    <form>
+      <label for="name">Nombre:</label>
+      <input type="text" id="name" name="name" required>
 
-        </form>
-    </div>
+      <label for="date">Fecha:</label>
+      <input type="date" id="date" name="date" required>
 
+      <label for="time">Hora:</label>
+      <input type="time" id="time" name="time" required>
+
+      <input type="submit" value="Reservar">
+    </form>
+  </div>
+
+  <div id="booking-list">
+    <h2>Mis Reservas</h2>
+    <ul id="reservations">
+      <!-- Lista de reservas aquí -->
+    </ul>
+  </div>
+
+  <script src="./script.js"></script>
+  <script src="./server.js"></script>
 </body>
-
 </html>
